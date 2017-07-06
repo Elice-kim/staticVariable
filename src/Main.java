@@ -26,5 +26,16 @@ public class Main {
         System.out.println("c1은 :" +c1.kind +","+c1.number+"이며 "+ c1.width+ ","+ c1.height);
         System.out.println("c2은 :" +c2.kind +","+c2.number+"이며 "+ c2.width+ ","+ c2.height);
 
+        //클래스메서드 바로호출 가능
+        System.out.println(MyMath.add(200L,100L));
+        System.out.println(MyMath.subtract(200L,100L));
+
+        //인스턴스 메서드는 객체생성 후에만 호출이 가능
+        MyMath myMath = new MyMath();
+        myMath.a = 300L;
+        myMath.b = 250L;
+
+        System.out.println(myMath.add());
+        System.out.println(myMath.subtract());
     }
 }
